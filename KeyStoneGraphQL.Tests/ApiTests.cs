@@ -26,5 +26,24 @@ namespace KeyStoneGraphQL.Tests
             var content = await response.Content.ReadAsStringAsync();
             Assert.False(string.IsNullOrWhiteSpace(content));
         }
+
+        [Fact]
+        public async Task Post_GraphQL_HelloQuery_ReturnsHello()
+        {
+            // Arrange
+            var query = new
+            {
+                query = "{ hello }"
+            };
+            var content = new StringContent(System.Text.Json.JsonSerializer.Serialize(query), System.Text.Encoding.UTF8, "application/json");
+
+            // Act
+            var response = await _client.PostAsync("/graphql", content);
+
+            // Assert
+            response.EnsureSuccessStatusCode();
+            var responseString = await response.Content.ReadAsStringAsync();
+            Assert.Contains("Hello from HotChocolate GraphQL!", responseString);
+        }
     }
 }
