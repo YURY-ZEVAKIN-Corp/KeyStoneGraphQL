@@ -1,4 +1,5 @@
-Dynamic GraphQL Schema
+**Dynamic GraphQL Schema**
+
 Revolutionizing Data Agility with a Database-Driven API
 This project introduces a novel approach to building GraphQL APIs, transforming them from rigid, hardcoded structures into dynamic, adaptable interfaces. Instead of defining your schema in application code, we enable it to be generated at runtime directly from definitions stored in your database. This paradigm shift dramatically enhances agility, reduces development bottlenecks, and future-proofs your data infrastructure.
 
