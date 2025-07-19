@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KeyStoneGraphQL\KeyStoneGraphQL.csproj" />
+    <ProjectReference Include="..\KeyStoneGraphQL.Application\KeyStoneGraphQL.Application.csproj" />
   </ItemGroup>
 
 </Project>
